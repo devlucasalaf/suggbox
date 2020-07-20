@@ -9,7 +9,7 @@
     "build": "next build"
   },
   "keywords": [],
-  "author": "Tulio Faria (DevPleno.com)",
+  "author": "Lucas Alves Afonso",
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^9.8.4",

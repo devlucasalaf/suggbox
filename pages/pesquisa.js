@@ -37,7 +37,7 @@ const Pesquisa = () => {
     <div className='pt-6'>
       <PageTitle title='Pesquisa' />
       <h1 className='text-center font-bold my-4 text-2xl'>Críticas e sugestões</h1>
-      <p className='text-center mb-6'>O restaurante <b>Hippie's Food</b> sempre busca por atender melhor seus clientes.<br />
+      <p className='text-center mb-6'>O restaurante <b>Biscoiteria Clones</b> sempre busca por atender melhor seus clientes.<br />
 Por isso, estamos sempre abertos a ouvir a sua opinião.</p>
       {!sucess && <div>
         <div className='text-center'>
