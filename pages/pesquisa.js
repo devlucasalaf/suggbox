@@ -37,37 +37,37 @@ const Pesquisa = () => {
     <div className='pt-6'>
       <PageTitle title='Pesquisa' />
       <h1 className='text-center font-bold my-4 text-2xl'>Críticas e sugestões</h1>
-      <p className='text-center mb-6'>O restaurante X sempre busca por atender melhor seus clientes.<br />
+      <p className='text-center mb-6'>O restaurante <b>Hippie's Food</b> sempre busca por atender melhor seus clientes.<br />
 Por isso, estamos sempre abertos a ouvir a sua opinião.</p>
       {!sucess && <div>
         <div className='text-center'>
           <label className='font-bold'>Seu nome:</label>
-          <input type='text' className='mx-auto max-w-sm p-4 shadow block bg-blue-100 my-2 rounded' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
+          <input type='text' className='mx-auto max-w-sm py-4 px-20 shadow block bg-blue-100 my-2 rounded' placeholder='Nome' onChange={onChange} name='Nome' value={form.Nome} />
         </div>
         <div className='text-center'>
           <label className='font-bold'>E-mail:</label>
-          <input type='text' className='mx-auto max-w-sm p-4 block shadow bg-blue-100 my-2 rounded' placeholder='Email' onChange={onChange} name='Email' value={form.Email} />
+          <input type='text' className='mx-auto max-w-sm py-4 px-20 block shadow bg-blue-100 my-2 rounded' placeholder='Email' onChange={onChange} name='Email' value={form.Email} />
         </div>
         <div className='text-center'>
           <label className='font-bold'>Whatsapp:</label>
-          <MaskedInput mask={['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]} type='text' className='mx-auto max-w-sm p-4 block shadow bg-blue-100 my-2 rounded' placeholder='(   ) 00000-0000' onChange={onChange} name='Whatsapp' value={form.Whatsapp} />
+          <MaskedInput mask={['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]} type='text' className='mx-auto max-w-sm py-4 block px-20 shadow bg-blue-100 my-2 rounded' placeholder='(   ) 00000-0000' onChange={onChange} name='Whatsapp' value={form.Whatsapp} />
         </div>
         <div className='text-center'>
           <label className='font-bold'>Nota:</label>
-          <div className='flex mb-6 mt-2'>
+          <div className='w-1/6 mx-auto flex mb-6 mt-2'>
             {notas.map(nota => {
               return (
-                <label className='block w-1/6 text-center'>
+                <label className='mx-auto'>
                   {nota}<br />
-                  <input type='radio' name='Nota' value={nota} onChange={onChange} />
+                  <input className='max-w-sm' type='radio' name='Nota' value={nota} onChange={onChange} />
                 </label>
               )
             })
             }
           </div>
         </div>
-        <div className='mx-auto'>
-          <button className='max-w-sm mb-4 bg-blue-400 px-20 py-4 font-bold rounded-lg shadow-lg hover:shadow' onClick={save}>Salvar</button>
+        <div className='text-center'>
+          <button className='max-w-sm px-24 py-4 mb-4 bg-blue-400 font-bold rounded-lg shadow-lg hover:shadow hover:bg-green-400' onClick={save}>Salvar</button>
         </div>
       </div>}
       {sucess && <div className='w-1/5 mx-auto'>
